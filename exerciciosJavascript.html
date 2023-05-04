@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Javascript</title>
+    <script src="ex01.js"></script>
+    <script src="ex02.js"></script>
+    <script src="ex03.js"></script>
+    <script src="ex04.js"></script>
+    <script src="ex05.js"></script>
+    <script src="ex06.js"></script>
+    <script src="ex07.js"></script>
+    <script src="ex08.js"></script>
+    <script src="ex09.js"></script>
+    <script src="ex10.js"></script>
+</head>
+
+<body>
+
+    Exercicio 1: Crie um formulário com 4 botões que, ao clicar em cada um, altere a cor do plano de fundo da página
+    para vermelho, verde, azul e amarelo, respectivamente. <br><br>
+
+    <button onclick="ex01('red');">vermelho</button>
+    <button onclick="ex01('green');">verde</button>
+    <button onclick="ex01('blue');">azul</button>
+    <button onclick="ex01('yellow');">amarelo</button><br><br>
+
+    Exercicio 2: Crie um formulário com 4 botões que, ao clicar em cada um, altere a cor do plano de fundo da página
+    para vermelho, verde, azul e amarelo, respectivamente. <br><br>
+
+    <a onmouseover="ex02('red')">vermelho</a>
+    <a onmouseover="ex02('green')">verde</a>
+    <a onmouseover="ex02('blue')">azul</a>
+    <a onmouseover="ex02('yellow')">amarelo</a><br><br>
+
+    Exercicio 3: Crie uma página com uma lista (select - RadioButton) com 4 opções de cores. Ao selecionar uma opção de
+    cor, altere o plano de fundo da página para a cor específica. <br><br>
+
+    <input type="radio" id="cor1" name="cor" value="red" onchange="ex03()">
+    <label for="cor1">Vermelho</label><br>
+    <input type="radio" id="cor2" name="cor" value="green" onchange="ex03()">
+    <label for="cor2">Verde</label><br>
+    <input type="radio" id="cor3" name="cor" value="blue" onchange="ex03()">
+    <label for="cor3">Azul</label><br>
+    <input type="radio" id="cor4" name="cor" value="yellow" onchange="ex03()">
+    <label for="cor4">Amarelo</label><br><br>
+
+    Exercicio 4: Crie um parágrafo (p) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou
+    mostre o texto do parágrafo.<br><br>
+
+    <p id="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo orci at nulla luctus
+        volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis nec justo
+        efficitur, lacinia lectus in, finibus nibh. Sed ut ultrices elit. Fusce eget feugiat libero. Phasellus efficitur
+        blandit massa, sed varius turpis accumsan ut. Praesent euismod consectetur ipsum, a commodo nisi fermentum vel.
+        Sed ac purus et quam convallis euismod sed a risus. Nunc malesuada, nisi at eleifend aliquam, mauris mauris
+        gravida mauris, sit amet iaculis mauris nunc nec ipsum. Vivamus sed libero at sem pharetra pellentesque. </p>
+    <button onclick="Ex04()">Mostrar/Ocultar</button><br><br>
+
+    Exercicio 5: Crie um formulário de seleção de itens com checkbox. O formulário deve possuir um botão desabilitado. O
+    botão só se torna clicável quando tiver pelo menos 2 checkboxs marcado.<br><br>
+
+    <form>
+        <label><input type="checkbox" onchange="enableButton()">Item 1</label><br>
+        <label><input type="checkbox" onchange="enableButton()">Item 2</label><br>
+        <label><input type="checkbox" onchange="enableButton()">Item 3</label><br>
+        <label><input type="checkbox" onchange="enableButton()">Item 4</label><br>
+        <label><input type="checkbox" onchange="enableButton()">Item 5</label><br>
+        <button id="button" type="submit" disabled>Enviar</button>
+    </form><br> <br>
+
+    Exercicio 6: Crie um parágrafo com um texto como conteúdo. Crie 4 botões. Dois para trocar a cor da fonte, de branco
+    para preto e vice-versa e outros dois para fazer o mesmo com o fundo do parágrafo. Use divs se julgar
+    necessário.<br><br>
+
+    <p id="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique harum obcaecati amet deleniti
+        odit. Et labore
+        eos, suscipit tempora totam dicta dolores excepturi, ut aspernatur architecto adipisci, temporibus beatae fuga!
+    </p>
+    <div>
+        <button onclick="changeFontColor()">Trocar cor da fonte</button>
+        <button onclick="changeBgColor()">Trocar cor do fundo</button>
+    </div>
+    <div>
+        <button onclick="changeFontColor()">Trocar cor da fonte</button>
+        <button onclick="changeBgColor()">Trocar cor do fundo</button>
+    </div> <br><br>
+    Exercicio 7: Crie um botão + (mais) e outro - (menos) na mesma página do exercício anterior. Esses botões aumentam e
+    diminuem o tamanho da fonte, respectivamente. <br> <br>
+    <button id="botao-mais">+</button>
+    <button id="botao-menos">-</button> <br><br>
+    Exercicio 8: Ainda continuando no exercício 6, faça um botão que transforme todo o texto do parágrafo em maiúscula,
+    e outro em minúscula. <br> <br>
+    <button onclick="transformarMaiusculas()">Maiúsculas</button>
+    <button onclick="transformarMinusculas()">Minúsculas</button> <br> <br>
+    Exercicio 9: Crie um formulário com os campos para cadastrar o usuário de um sistema (login, senha e confirmar
+    senha). Permita que a página seja submetida apenas se todos os campos estiverem preenchidos, se os campos senha e
+    confirma senha forem iguais e a senha possuir entre 6 e 10 caracteres.<br> <br>
+    <form name="formulario" onsubmit="return validarForm()">
+        <label for="login">Login:</label>
+        <input type="text" name="login" id="login" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required><br>
+
+        <label for="confirmaSenha">Confirmar senha:</label>
+        <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
+
+        <input type="submit" value="Cadastrar"> <br><br>
+
+    </form>
+    Exercicio 10: Crie um formulário de cadastro de cliente. O formulário deve conter os campos Nome (text), Pessoa
+    (Física/Jurídica - radio), CPF (text), CNPJ (text), data de nascimento, endereço (text), cep (text), telefone
+    (text), email. O formulário deve ativar o campo CPF apenas se o RadioButton de pessoa física estiver ativo e o
+    campo de CNPJ no caso de pessoa jurídica. O campo data de nascimento também só deve estar ativo no caso de
+    pessoa física ser selecionado e deve aceitar que somente números sejam digitados. O campo CEP também só deve
+    aceitar número.<br><br>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="pessoa">Pessoa:</label>
+        <input type="radio" id="fisica" name="pessoa" value="fisica" required>
+        <label for="fisica">Física</label>
+
+        <input type="radio" id="juridica" name="pessoa" value="juridica" required>
+        <label for="juridica">Jurídica</label>
+
+        <div id="cpfContainer">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" minlength="11" maxlength="11">
+        </div>
+
+        <div id="cnpjContainer">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" minlength="14" maxlength="14">
+        </div>
+
+        <div id="dataNascimentoContainer">
+            <label for="dataNascimento">Data de nascimento:</label>
+            <input type="text" id="dataNascimento" name="dataNascimento" minlength="8" maxlength="8">
+        </div>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" pattern="[0-9]{8}">
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </form>
+</body>
+
+
+</html>
