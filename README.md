@@ -13,7 +13,7 @@ onmouseover altere a cor do plano de fundo para cor correspondente.
 3 - Crie uma página com uma lista (select - RadioButton) com 4 opções de cores. Ao selecionar uma opção de cor, 
 altere o plano de fundo da página para a cor específica. 
  
-4 – Crie um parágrafo (<p>) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou mostre o 
+4 – Crie um parágrafo (p) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou mostre o 
 texto do parágrafo. 
  
 5 – Crie um formulário de seleção de itens com checkbox. O formulário deve possuir um botão desabilitado. O botão 
